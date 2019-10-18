@@ -17,7 +17,31 @@
 	font-weight: bold;
 }
 
-.mt-30
+.pt-30
 {
 	padding-top: 30px;
+}
+
+.mt-30
+{
+	margin-top: 30px;
+}
+
+.iconsize
+{
+	font-size:80px;
+}
+
+.red
+{
+	color: red;
+}
+
+a { 
+	color: inherit; 
+
+} 
+
+a:hover {
+ cursor:pointer;
 }
