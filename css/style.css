@@ -1,0 +1,23 @@
+.head
+{
+	background-color: skyblue;
+	color: #000;
+	font-weight: bolder;
+}
+
+.cen
+{
+	text-align: center;
+	font-family: serif;
+	color: #000;
+}
+
+.weight
+{
+	font-weight: bold;
+}
+
+.mt-30
+{
+	padding-top: 30px;
+}
