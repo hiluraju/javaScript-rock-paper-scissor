@@ -17,19 +17,45 @@
   <button class="btn btn-danger mt-30">Restart Game</button>
 </div>
 
+
+<!-- <div class="container">
+<div class="row">
+<div class="col-sm-2 cen"> 
+<table class="table table-condensed iblock">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+      </tr>
+    </tbody>
+</table>
+</div>
+</div>
+</div> -->
+
 <div class="container">
 	<div class="row cen">
 		<h4>
 		<span class="weight red">PLAYER </span> <span class="weight">|</span> 
 		<span class="weight red">COMPUTER</span>
 		</h4>
+    <h4>
+    <span class="weight ">0 </span>  
+    <span class="weight ">0</span>
+    </h4>
 	</div>
 </div>
   
 <div class="container pt-30">
   <div class="row">
   	<div class="col-sm-4 cen iconsize">
-      <a><i class="fa fa-hand-grab-o" id="stone"></i></a>
+      <a><i class="fa fa-hand-grab-o" id="rock"></i></a>
     </div>
     <div class="col-sm-4 cen iconsize">
       <a><i class="fa fa-file-text-o" id="paper"></i></a>
@@ -37,6 +63,13 @@
     <div class="col-sm-4 cen iconsize">
       <a><i class="fa fa-cut" id="scissor"></i></a>
     </div>
+  </div>
+</div>
+<div class="container" id="output"> 
+  <div class="row" class="cen"> 
+    <p>Result</p>
+    <p id="res"></p>
+    <p id="computerchoice"></p>    
   </div>
 </div>
   <script type="text/javascript" src="js/main.js"></script>

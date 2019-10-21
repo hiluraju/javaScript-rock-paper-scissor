@@ -45,3 +45,8 @@ a {
 a:hover {
  cursor:pointer;
 }
+
+.iblock
+{
+	display: inline-block;
+}
