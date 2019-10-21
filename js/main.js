@@ -11,6 +11,7 @@ function playGame(e)
 	let computerSelection = computerChoice();
 	let winner            = findWinner(userSelection,computerSelection);
 	ShowResult(winner,computerSelection);
+	updateScore(winner);
 	// console.log(userSelection,computerSelection,winner);
 }
 
@@ -85,20 +86,41 @@ function ShowResult(winner,computerSelection)
 {	
 	if(winner != "draw")
 	{
-		document.getElementById("res").innerHTML 		    = `${winner} Wins!!!`;		
+		document.getElementById("res").innerHTML 	    = `${winner} Wins!!!`;		
 	}
 	else
 	{
-		document.getElementById("res").innerHTML 		    = "It's a Draw!!!";
+		document.getElementById("res").innerHTML 	    = "It's a Draw!!!";
 	}
 	document.getElementById("computerchoice").innerHTML = `Computer choose ${computerSelection}`;
 	document.getElementById("output").style.display     = "block";
 
 }
 
+function updateScore(winner)
+{
+	if(winner != "draw")
+	{
+		if (winner == "computer") 
+		{
+			result.computer = result.computer + 1;
+			document.getElementById("computerpoints").innerHTML   = `${result.computer}`;
+		}
+		else
+		{
+			result.user = result.user + 1;
+			document.getElementById("playerpoints").innerHTML   = `${result.computer}`;
+		}
+	}
+}
+
 function restartGame()
 {
-	console.log("here");
+	result.user      = 0;
+	result.computer  = 0;
+	document.getElementById("playerpoints").innerHTML   = "0";
+	document.getElementById("computerpoints").innerHTML = "0";
+
 }
 
 //EventListner
