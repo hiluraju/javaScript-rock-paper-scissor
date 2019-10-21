@@ -109,7 +109,7 @@ function updateScore(winner)
 		else
 		{
 			result.user = result.user + 1;
-			document.getElementById("playerpoints").innerHTML   = `${result.computer}`;
+			document.getElementById("playerpoints").innerHTML   = `${result.user}`;
 		}
 	}
 }
