@@ -1,10 +1,26 @@
-//EventListner
-document.querySelectorAll(".fa").addEventListener("click", playGame);
+const selections = document.querySelectorAll(".fa");
 
 function playGame(e)
 {
-	console.log("here");
-	console.log(e);
+	let userSelection = e.srcElement.id;	
+	computerChoice();
 }
+
+function computerChoice()
+{
+
+}
+
+
+
+//EventListner
+
+selections.forEach(function(selection)
+	{
+		selection.addEventListener("click", playGame)
+	});
+
+
+
 
 
