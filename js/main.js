@@ -1,5 +1,7 @@
 const selections = document.querySelectorAll(".fa");
-const result     = { user : 0 , computer : 0};
+let restart      = document.getElementById("restart");
+let result       = { user : 0 , computer : 0};
+
 
 document.getElementById("output").style.display = "none";
 
@@ -80,11 +82,23 @@ function findWinner(user,comp)
 
 
 function ShowResult(winner,computerSelection)
-{
-	document.getElementById("res").innerHTML 		    = `${winner} Wins!!!`;
+{	
+	if(winner != "draw")
+	{
+		document.getElementById("res").innerHTML 		    = `${winner} Wins!!!`;		
+	}
+	else
+	{
+		document.getElementById("res").innerHTML 		    = "It's a Draw!!!";
+	}
 	document.getElementById("computerchoice").innerHTML = `Computer choose ${computerSelection}`;
 	document.getElementById("output").style.display     = "block";
 
+}
+
+function restartGame()
+{
+	console.log("here");
 }
 
 //EventListner
@@ -94,6 +108,7 @@ selections.forEach(function(selection)
 	selection.addEventListener("click", playGame)
 });
 
+restart.addEventListener("click",restartGame)
 
 
 

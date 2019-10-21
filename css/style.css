@@ -3,6 +3,7 @@
 	background-color: skyblue;
 	color: #000;
 	font-weight: bolder;
+	background-image:url('../images/1.jpeg');
 }
 
 .cen
@@ -49,4 +50,11 @@ a:hover {
 .iblock
 {
 	display: inline-block;
+}
+
+.table {
+    border-radius: 5px;
+    width: 50%;
+    margin: 0px auto;
+    float: none;
 }
