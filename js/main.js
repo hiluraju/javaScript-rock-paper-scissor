@@ -1,18 +1,16 @@
-const selections = document.querySelectorAll(".fa");
+let selections   = document.querySelectorAll(".fa");
 let restart      = document.getElementById("restart");
 let result       = { user : 0 , computer : 0};
 
-
-document.getElementById("output").style.display = "none";
+document.getElementById("myModal").style.display = "none";
 
 function playGame(e)
 {
 	let userSelection     = e.srcElement.id;	
 	let computerSelection = computerChoice();
 	let winner            = findWinner(userSelection,computerSelection);
-	ShowResult(winner,computerSelection);
+	ShowResult(winner,computerSelection,userSelection);
 	updateScore(winner);
-	// console.log(userSelection,computerSelection,winner);
 }
 
 function computerChoice()
@@ -82,20 +80,59 @@ function findWinner(user,comp)
 }
 
 
-function ShowResult(winner,computerSelection)
+function ShowResult(winner,computerSelection,userSelection)
 {	
+	let computerClass;
+	let userClass;
+
 	if(winner != "draw")
 	{
-		document.getElementById("res").innerHTML 	    = `${winner} Wins!!!`;		
+		winner = winner.toUpperCase();
+		document.getElementById("res").innerHTML 	    = `${winner} WINS`;		
 	}
 	else
 	{
 		document.getElementById("res").innerHTML 	    = "It's a Draw!!!";
 	}
-	document.getElementById("computerchoice").innerHTML = `Computer choose ${computerSelection}`;
-	document.getElementById("output").style.display     = "block";
 
+	if(computerSelection == "rock") 
+	{
+		 computerClass = "fa-hand-grab-o";
+	}
+	else if(computerSelection == "paper")
+	{
+		 computerClass = "fa-file-text-o";
+	}
+	else
+	{
+		 computerClass = "fa-cut";
+	}
+
+	if(userSelection == "rock") 
+	{
+		 userClass = "fa-hand-grab-o";
+	}
+	else if(userSelection == "paper")
+	{
+		 userClass = "fa-file-text-o";
+	}
+	else
+	{
+		 userClass = "fa-cut";
+	}
+	
+	let computerchoice 		 = document.getElementById("computerchoice");
+	let userchoice     		 = document.getElementById("userchoice");
+	computerchoice.className = '';
+	userchoice.className     = '';
+	computerchoice.classList.add("fa");
+	userchoice.classList.add("fa");
+	computerchoice.classList.add(computerClass);
+	userchoice.classList.add(userClass);
+
+	$('#myModal').modal('show')
 }
+
 
 function updateScore(winner)
 {

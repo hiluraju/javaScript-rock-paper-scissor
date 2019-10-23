@@ -30,7 +30,12 @@
 
 .iconsize
 {
-	font-size:80px;
+	font-size: 80px;
+}
+
+.iconsmall
+{
+	font-size: 40px;
 }
 
 .red
@@ -57,4 +62,14 @@ a:hover {
     width: 50%;
     margin: 0px auto;
     float: none;
+}
+
+.green
+{
+	color: green;
+}
+
+.blue
+{
+	color: blue;
 }
